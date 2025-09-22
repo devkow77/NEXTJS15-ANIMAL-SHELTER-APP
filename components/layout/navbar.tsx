@@ -15,7 +15,7 @@ const Navbar = async () => {
   console.log("Session from (navbar):", session);
 
   return (
-    <nav className="py-6">
+    <nav className="mb-8 py-6 md:mb-16">
       <Container className="flex items-center justify-between">
         <Logo />
         <DesktopMenu />

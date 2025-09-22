@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="mt-8 md:mt-16">
       <Container>
         <GoogleMap
           apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAP_API_KEY!}
