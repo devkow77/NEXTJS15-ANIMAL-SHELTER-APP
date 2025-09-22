@@ -1,0 +1,136 @@
+"use client";
+
+import * as React from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu";
+
+interface Animal {
+  title: string;
+  href: string;
+  description: string;
+}
+
+const animals: Animal[] = [
+  {
+    title: "Dogs",
+    href: "/animals/dogs",
+    description:
+      "Loyal companions known for their playful nature and strong bond with humans.",
+  },
+  {
+    title: "Cats",
+    href: "/animals/cats",
+    description:
+      "Independent yet affectionate animals, often admired for their elegance and curiosity.",
+  },
+  {
+    title: "Rabbits",
+    href: "/animals/rabbits",
+    description:
+      "Gentle, quiet creatures with soft fur and a love for hopping around.",
+  },
+  {
+    title: "Other",
+    href: "/animals/other",
+    description:
+      "Explore a variety of unique animals that don’t fit into the usual categories.",
+  },
+];
+
+const DesktopMenu = () => {
+  const pathname = usePathname();
+
+  return (
+    <NavigationMenu viewport={false} className="z-10 hidden xl:block">
+      <NavigationMenuList>
+        <NavigationMenuItem>
+          <NavigationMenuLink
+            asChild
+            className={`${pathname == "/" ? "text-green-600 dark:text-green-400" : ""} ${navigationMenuTriggerStyle()}`}
+          >
+            <Link href="/" className="bg-transparent">
+              Home
+            </Link>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuLink
+            asChild
+            className={`${pathname == "/about" ? "text-pink-600 dark:text-pink-400" : ""} ${navigationMenuTriggerStyle()}`}
+          >
+            <Link href="/about" className="bg-transparent">
+              Who are we?
+            </Link>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger className="bg-transparent">
+            Animals
+          </NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid w-[300px] gap-4">
+              {animals.length
+                ? animals.map(({ title, href, description }, index) => (
+                    <NavigationMenuLink
+                      className={`${pathname == href ? "text-green-600 dark:text-green-400" : ""}`}
+                      asChild
+                      key={index}
+                    >
+                      <Link href={href} className="bg-transparent">
+                        <div className="font-medium">{title}</div>
+                        <div className="text-muted-foreground">
+                          {description}
+                        </div>
+                      </Link>
+                    </NavigationMenuLink>
+                  ))
+                : null}
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuLink
+            asChild
+            className={`${pathname == "/blog/page/1" ? "text-blue-600 dark:text-blue-400" : ""} ${navigationMenuTriggerStyle()}`}
+          >
+            <Link href="/blog/page/1" className="bg-transparent">
+              Blog
+            </Link>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuLink
+            asChild
+            className={`${pathname == "/faq" ? "text-red-600 dark:text-red-400" : ""} ${navigationMenuTriggerStyle()}`}
+          >
+            <Link href="/faq" className="bg-transparent">
+              Faq
+            </Link>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuLink
+            asChild
+            className={`${pathname == "/contact" ? "text-purple-600 dark:text-purple-400" : ""} ${navigationMenuTriggerStyle()}`}
+          >
+            <Link href="/contact" className="bg-transparent">
+              Contact
+            </Link>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+      </NavigationMenuList>
+    </NavigationMenu>
+  );
+};
+
+export default DesktopMenu;

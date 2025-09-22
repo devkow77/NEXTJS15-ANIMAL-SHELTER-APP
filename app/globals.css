@@ -3,6 +3,14 @@
 
 @custom-variant dark (&:is(.dark *));
 
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
