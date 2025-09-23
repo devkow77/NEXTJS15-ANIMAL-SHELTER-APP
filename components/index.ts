@@ -10,6 +10,7 @@ import FooterContent from "./footer-content";
 import FaqAccordion from "./faq-accordion";
 // sections /blog
 import PaginationMenu from "./pagination-menu";
+import BlogPostImage from "./blog-post-image";
 
 export {
   DesktopMenu,
@@ -20,4 +21,5 @@ export {
   FooterContent,
   FaqAccordion,
   PaginationMenu,
+  BlogPostImage,
 };
