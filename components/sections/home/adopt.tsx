@@ -48,7 +48,7 @@ const Adopt = () => {
       <Container className="space-y-12">
         <h2
           id="adopt-title"
-          className="text-center text-2xl font-black lg:text-3xl"
+          className="text-center text-2xl font-black md:text-3xl"
         >
           How to Adopt a Pet?
         </h2>
@@ -62,7 +62,7 @@ const Adopt = () => {
                 {number}
               </div>
               <h3 className="font-semibold">{title}</h3>
-              <p className="text-sm md:text-base dark:opacity-80">
+              <p className="text-sm leading-6 md:text-base md:leading-8 dark:opacity-80">
                 {description}
               </p>
             </article>

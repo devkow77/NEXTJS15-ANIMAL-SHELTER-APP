@@ -65,7 +65,7 @@ const Animals = () => {
     >
       <Container className="space-y-6">
         <header className="space-y-2">
-          <h2 id="animals-title" className="text-2xl font-black lg:text-3xl">
+          <h2 id="animals-title" className="text-2xl font-black md:text-3xl">
             They Are Waiting the Most Time
           </h2>
           <p className="text-sm leading-6 md:text-base md:leading-8 dark:opacity-80">

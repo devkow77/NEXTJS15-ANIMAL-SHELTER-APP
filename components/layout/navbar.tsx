@@ -9,6 +9,7 @@ import {
 import { Button } from "../ui/button";
 import { auth } from "@/app/auth";
 import Link from "next/link";
+import { Session } from "next-auth";
 
 const Navbar = async () => {
   const session = await auth();
@@ -27,7 +28,7 @@ const Navbar = async () => {
 
 const Logo = () => <h1 className="font-semibold">Ani🐈al 🐍helter</h1>;
 
-const Functionalities = ({ session }: { session: any }) => {
+const Functionalities = ({ session }: { session: Session | null }) => {
   "use client";
 
   return (

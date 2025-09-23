@@ -11,6 +11,7 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { signOutAccount, signInByGithub, signInByGoogle } from "@/lib/auth";
 import Link from "next/link";
+import { Session } from "next-auth";
 
 interface User {
   name: string;
@@ -19,7 +20,7 @@ interface User {
 }
 
 interface ProfileProps {
-  session: any;
+  session: Session | null;
 }
 
 const Profile = ({ session }: ProfileProps) => {

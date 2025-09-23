@@ -11,6 +11,7 @@ const buttonVariants = cva(
       variant: {
         default: "bg-primary text-primary-foreground hover:bg-primary/90",
         home: "bg-green-600 dark:text-white text-black hover:bg-green-400",
+        about: "bg-pink-600 dark:text-white text-black hover:bg-pink-400",
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",

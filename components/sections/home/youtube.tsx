@@ -2,16 +2,16 @@ import { Container } from "@/components/shared/index";
 
 const Youtube = () => {
   return (
-    <section aria-labelledby="youtube-title">
+    <section aria-labelledby="youtube-title" className="mb-12">
       <Container className="space-y-6 lg:space-y-12">
         <h2
           id="youtube-title"
-          className="text2xl text-center font-black md:text-left lg:text-3xl"
+          className="text-center text-2xl font-black md:text-left md:text-3xl"
         >
           Watch Us On YT!
         </h2>
         <div className="gap-8 md:flex lg:gap-12">
-          <p className="hidden w-1/2 text-sm leading-8 md:block xl:text-base dark:opacity-80">
+          <p className="hidden w-1/2 text-sm leading-6 md:block md:text-base md:leading-8 dark:opacity-80">
             Discover more about our journey, values, and behind-the-scenes
             stories by watching our videos on YouTube.
           </p>
