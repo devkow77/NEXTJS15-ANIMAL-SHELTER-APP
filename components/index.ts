@@ -6,8 +6,10 @@ import Profile from "./profile";
 // layout/footer components
 import GoogleMap from "./google-map";
 import FooterContent from "./footer-content";
-// sections/home components
+// sections /home components
 import FaqAccordion from "./faq-accordion";
+// sections /blog
+import PaginationMenu from "./pagination-menu";
 
 export {
   DesktopMenu,
@@ -17,4 +19,5 @@ export {
   GoogleMap,
   FooterContent,
   FaqAccordion,
+  PaginationMenu,
 };
